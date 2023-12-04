@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!--Font awesome and google fonts-->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <header><h1>Rock, Paper, Scissors</h1></header>
+
+    <section class="game-area">
+        <div>
+            <p>Choose 1 of the following :</p>
+            <button aria-label="Rock">Rock</button>
+            <button aria-label="Paper">Paper</button>
+            <button aria-label="Scissors">Scissors</button>
+        </div>
+
+       <div class="player">
+        <h2 class="scores">Your Score :<span id="player-score">0</span></h2>
+        <img>
+       </div>
+
+       <div class="computer">
+        <h2 class="scores">Computer Score : <span id="computer-score"></span></h2>
+        <img>
+       </div>
+        
+    </section>
+
     <script src="assets/js/script.js"></script>
+    <footer> 
+     <h3>Rules</h3>
+     <p>Rock > Scissors | Paper > Rock | Scissors > Paper</p>
+    </footer>
 </body>
 </html>
