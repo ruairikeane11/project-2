@@ -13,3 +13,20 @@ body {
 }
 
 /* Header and Footer*/
+header {
+    text-align: center;
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    min-height: 70px;
+    padding-top: 2px;
+    text-align: center;
+    color: gray;
+    background-color: black;
+}
