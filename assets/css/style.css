@@ -1,2 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300;400&display=swap');
 
+/* Main View Styling */
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: oswald, sans serif;
+    background-color: gray;
+}
+
+/* Header and Footer*/
