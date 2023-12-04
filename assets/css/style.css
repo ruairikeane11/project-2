@@ -30,3 +30,46 @@ footer {
     color: gray;
     background-color: black;
 }
+/* Game area*/
+.game-area {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.selector {
+    display: inline-block;
+    margin: 2px;
+    width: 150px;
+    height: 40px;
+}
+
+.player {
+    background-color: blue;
+    float: left;
+    width: 50%;
+    height: 300px;
+}
+
+.computer {
+    background-color: pink;
+    float: right;
+    width: 50%;
+    height: 300px;
+}
+
+#messages {
+    height: 30px;
+}
+
+#player-image {
+    width: 50%;
+    margin-top: 2px;
+}
+
+#computer-image {
+    width: 50%;
+    margin-top: 2px;
+}
