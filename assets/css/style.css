@@ -12,20 +12,22 @@ body {
     background-color: gray;
 }
 
+
 /* Header and Footer*/
 header {
     text-align: center;
-    margin: 0;
+    margin: auto;
+
 }
 
 footer {
     position: absolute;
     width: 100%;
+    min-height: 50px;
     bottom: 0;
     left: 0;
     box-sizing: border-box;
-    min-height: 70px;
-    padding-top: 2px;
+    padding-top: 1px;
     text-align: center;
     color: gray;
     background-color: black;
@@ -41,35 +43,39 @@ footer {
 
 .selector {
     display: inline-block;
-    margin: 2px;
+    margin: 15px;
     width: 150px;
-    height: 40px;
+    height: 30px;
 }
 
+
 .player {
-    background-color: blue;
+    background-color: green;
     float: left;
-    width: 50%;
-    height: 300px;
+    width: 35%;
+    height: 280px;
+    
 }
 
 .computer {
-    background-color: pink;
+    background-color: yellow;
     float: right;
-    width: 50%;
-    height: 300px;
+    width: 30%;
+    height: 280px;
 }
 
 #messages {
     height: 30px;
+    
 }
 
 #player-image {
     width: 50%;
-    margin-top: 2px;
+    position: relative;
 }
 
 #computer-image {
     width: 50%;
-    margin-top: 2px;
+    position: relative;
 }
+
