@@ -32,6 +32,10 @@ footer {
     color: gray;
     background-color: black;
 }
+
+footer > p {
+    font-size: 20px
+}
 /* Game area*/
 .game-area {
     width: 75%;
@@ -53,7 +57,7 @@ footer {
     background-color: green;
     float: left;
     width: 35%;
-    height: 280px;
+    height: 260px;
     
 }
 
@@ -61,7 +65,7 @@ footer {
     background-color: yellow;
     float: right;
     width: 30%;
-    height: 280px;
+    height: 260px;
 }
 
 #messages {
