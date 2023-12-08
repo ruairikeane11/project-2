@@ -21,21 +21,12 @@ let result;
  * Add event listeners to all the buttons
  */
 
-choiceBtns.forEach(button => button.addEventListener("click", () => {
-
-    player = button.textContent;
-    computerTurn();
-    playerScore.textContent = `Player: ${player}`;
-    computerScore.textContent = `Computer: ${computer}`;
-    checkWinner();
-}));
-
 for (let button of buttons) {
     button.addEventListener("click", function () {
         let playerChoice = this.getAttribute("data-choice");
-        playGame()
+        playGame(playerChoice);
 
-    })
+    });
 }
 
 
@@ -50,7 +41,7 @@ function playGame(playerChoice) {
 
     let computerChoice = Math.floor(Math.random() * 3);
 
-    computerChoice.src = `assets/images/${choices[computerChoice]}.jpg`
+    computerImage.src = `assets/images/${choices[computerChoice]}.jpg`
     computerImage.alt = choices[computerChoice];
 
     let result = checkWinner(choices[computerChoice], choices[playerChoice]);
@@ -63,7 +54,19 @@ function playGame(playerChoice) {
  * player and computer
  */
 
-function checkWinner() {
+function checkWinner(playerChoice, computerChoice) {
+    if (playerChoice == computerChoice) {
+        let result = "Tie";
+        return result;
+    } else if ((playerChoice == 'rock' && computerChoice == "scissors") ||
+        (playerChoice == 'scissors' && computerChoice == "paper") ||
+        (playerChoice == 'paper' && computerChoice == 'rock')) {
+        let result = "Win";
+        return result;
+    } else {
+        let result = 'Lose';
+        return result;
+    }
 
 }
 
