@@ -30,6 +30,14 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
     checkWinner();
 }));
 
+for (let button of buttons) {
+    button.addEventListener("click", function () {
+        let playerChoice = this.getAttribute("data-choice");
+        playGame()
+
+    })
+}
+
 
 /**
  * Main Game function, takes one parameter 
@@ -51,7 +59,12 @@ function playGame(playerChoice) {
 }
 
 /**
- * Checks who the winner is, accepts 
+ * Checks who the winner is, accepts both strings chosen from 
+ * player and computer
  */
+
+function checkWinner() {
+
+}
 
 
