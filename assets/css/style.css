@@ -57,7 +57,7 @@ footer > p {
     background-color: green;
     float: left;
     width: 35%;
-    height: 260px;
+    height: 240px;
     
 }
 
@@ -65,7 +65,7 @@ footer > p {
     background-color: yellow;
     float: right;
     width: 30%;
-    height: 260px;
+    height: 240px;
 }
 
 #messages {
@@ -75,11 +75,13 @@ footer > p {
 
 #player-image {
     width: 50%;
+    height: 55%;
     position: relative;
 }
 
 #computer-image {
     width: 50%;
+    height: 55%;
     position: relative;
 }
 
