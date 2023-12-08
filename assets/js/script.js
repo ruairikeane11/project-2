@@ -19,7 +19,7 @@ const choices = ['rock', 'paper', 'scissors']
 for (let button of buttons) {
     button.addEventListener("click", function () {
         let playerChoice = this.getAttribute("data-choice");
-        alert(`You clicked $[playerChoice]`);
+        alert(`You clicked ${playerChoice}`);
         playGame(playerChoice);
 
     });
