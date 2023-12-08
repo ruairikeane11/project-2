@@ -11,11 +11,6 @@ const computerImage = document.getElementById("computer-image");
 const messages = document.getElementById("messages")
 const choices = ['rock', 'paper', 'scissors']
 
-let player;
-let computer;
-let result;
-
-
 
 /**
  * Add event listeners to all the buttons
@@ -24,6 +19,7 @@ let result;
 for (let button of buttons) {
     button.addEventListener("click", function () {
         let playerChoice = this.getAttribute("data-choice");
+        alert(`You clicked $[playerChoice]`);
         playGame(playerChoice);
 
     });
