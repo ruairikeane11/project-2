@@ -52,14 +52,17 @@ function playGame(playerChoice) {
 
 function checkWinner(playerChoice, computerChoice) {
     if (playerChoice == computerChoice) {
+        alert('It is a tie!');
         let result = "Tie";
         return result;
     } else if ((playerChoice == 'rock' && computerChoice == "scissors") ||
         (playerChoice == 'scissors' && computerChoice == "paper") ||
         (playerChoice == 'paper' && computerChoice == 'rock')) {
+        alert("You win :)");
         let result = "Win";
         return result;
     } else {
+        alert('You lose:(');
         let result = 'Lose';
         return result;
     }
