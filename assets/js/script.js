@@ -8,8 +8,8 @@ const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-const messages = document.getElementById("messages")
-const choices = ['rock', 'paper', 'scissors']
+let messages = document.getElementById("messages");
+const choices = ["rock", "paper", "scissors"];
 
 
 /**
@@ -21,6 +21,8 @@ for (let button of buttons) {
         let playerChoice = this.getAttribute("data-choice");
         alert(`You clicked ${playerChoice}`);
         playGame(playerChoice);
+        updateScores(oldScore);
+        getMessage()
 
     });
 }
@@ -37,12 +39,17 @@ function playGame(playerChoice) {
 
     let computerChoice = Math.floor(Math.random() * 3);
 
-    computerImage.src = `assets/images/${choices[computerChoice]}.jpg`
+    computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
     computerImage.alt = choices[computerChoice];
 
-    let result = checkWinner(choices[computerChoice], choices[playerChoice]);
+    let result = checkWinner(choices[playerChoice], choices[computerChoice]);
+
+    getMessage();
+
 
     updateScores(result);
+
+
 }
 
 /**
@@ -55,18 +62,39 @@ function checkWinner(playerChoice, computerChoice) {
         alert('It is a tie!');
         let result = "Tie";
         return result;
+
     } else if ((playerChoice == 'rock' && computerChoice == "scissors") ||
         (playerChoice == 'scissors' && computerChoice == "paper") ||
         (playerChoice == 'paper' && computerChoice == 'rock')) {
         alert("You win :)");
+        updateScores(playerScore);
         let result = "Win";
         return result;
+
     } else {
         alert('You lose:(');
+        updateScores(computerScore);
         let result = 'Lose';
         return result;
     }
 
 }
 
+/**
+ * Gets answer from DOM and displays it in the messages div
+ */
+
+function getMessage() {
+
+}
+
+
+/**
+ * Gets score from DOM and increments by one
+ */
+
+function updateScores(playerScore, computerScore) {
+    let oldScore = parseInt(document.getElementsByClassName("span").innerText;
+    document.getElementsByClassName('span').innerText = ++oldScore;
+}
 

@@ -33,9 +33,10 @@ footer {
     background-color: black;
 }
 
-footer > p {
+footer>p {
     font-size: 20px
 }
+
 /* Game area*/
 .game-area {
     width: 75%;
@@ -58,7 +59,7 @@ footer > p {
     float: left;
     width: 35%;
     height: 240px;
-    
+
 }
 
 .computer {
@@ -70,7 +71,7 @@ footer > p {
 
 #messages {
     height: 30px;
-    
+
 }
 
 #player-image {
@@ -84,4 +85,3 @@ footer > p {
     height: 55%;
     position: relative;
 }
-
