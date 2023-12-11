@@ -4,8 +4,8 @@
  */
 
 const buttons = document.getElementsByClassName("selector");
-const playerScore = document.getElementById("player-score");
-const computerScore = document.getElementById("computer-score");
+let playerScore = document.getElementById("player-score");
+let computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 let messages = document.getElementById("messages");
@@ -21,8 +21,7 @@ for (let button of buttons) {
         let playerChoice = this.getAttribute("data-choice");
         alert(`You clicked ${playerChoice}`);
         playGame(playerChoice);
-        updateScores(oldScore);
-        getMessage()
+
 
     });
 }
@@ -34,6 +33,8 @@ for (let button of buttons) {
  */
 
 function playGame(playerChoice) {
+
+
     playerImage.src = `assets/images/${choices[playerChoice]}.jpg`;
     playerImage.alt = choices[playerChoice];
 
@@ -44,11 +45,9 @@ function playGame(playerChoice) {
 
     let result = checkWinner(choices[playerChoice], choices[computerChoice]);
 
-    getMessage();
-
 
     updateScores(result);
-
+    getMessage(result);
 
 }
 
@@ -58,22 +57,21 @@ function playGame(playerChoice) {
  */
 
 function checkWinner(playerChoice, computerChoice) {
-    if (playerChoice == computerChoice) {
+    if (playerChoice === computerChoice) {
         alert('It is a tie!');
         let result = "Tie";
         return result;
 
-    } else if ((playerChoice == 'rock' && computerChoice == "scissors") ||
-        (playerChoice == 'scissors' && computerChoice == "paper") ||
-        (playerChoice == 'paper' && computerChoice == 'rock')) {
+    } else if (
+        (playerChoice === 'rock' && computerChoice === "scissors") ||
+        (playerChoice === 'scissors' && computerChoice === "paper") ||
+        (playerChoice === 'paper' && computerChoice === 'rock')) {
         alert("You win :)");
-        updateScores(playerScore);
         let result = "Win";
         return result;
 
     } else {
         alert('You lose:(');
-        updateScores(computerScore);
         let result = 'Lose';
         return result;
     }
@@ -84,7 +82,17 @@ function checkWinner(playerChoice, computerChoice) {
  * Gets answer from DOM and displays it in the messages div
  */
 
-function getMessage() {
+function getMessage(result) {
+    let messages = document.getElementById('messages');
+
+    if (result === 'Tie') {
+        messages.innerHTML = '<h2>ITS A DRAW!</h2>';
+    } else if (result === 'Win') {
+        messages.innerHTML = '<h2>YOU WIN THIS ROUND!</h2>';
+    } else {
+        messages.innerHTML = '<h2>YOU LOSE THIS ROUND!</h2>';
+    }
+
 
 }
 
@@ -93,8 +101,26 @@ function getMessage() {
  * Gets score from DOM and increments by one
  */
 
-function updateScores(playerScore, computerScore) {
-    let oldScore = parseInt(document.getElementsByClassName("span").innerText;
-    document.getElementsByClassName('span').innerText = ++oldScore;
+function updateScores(result) {
+
+    let playerScore = parseInt(document.getElementById('player-score').innerText);
+    let computerScore = parseInt(document.getElementById('computer-score').innerText);
+
+    if (result === "Tie") {
+
+        playerScore += 1;
+        computerScore += 1;
+
+    } else if (result === 'Win') {
+        playerScore += 1;
+
+    } else {
+        computerScore += 1;
+    }
+
+    document.getElementById('player-score').textContent = playerScore.toString();
+    document.getElementById('computer-score').textContent = computerScore.toString();
+
+
 }
 

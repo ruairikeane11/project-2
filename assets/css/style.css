@@ -55,7 +55,7 @@ footer>p {
 
 
 .player {
-    background-color: green;
+    background-color: blue;
     float: left;
     width: 35%;
     height: 240px;
@@ -63,7 +63,7 @@ footer>p {
 }
 
 .computer {
-    background-color: yellow;
+    background-color: red;
     float: right;
     width: 30%;
     height: 240px;
