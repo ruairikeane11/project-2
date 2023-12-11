@@ -86,11 +86,12 @@ function getMessage(result) {
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
-        messages.innerHTML = '<h2>ITS A DRAW!</h2>';
+        messages.innerHTML = '<h2>ITS A DRAW!</h2><<h2>GO AGAIN!</h2>';
     } else if (result === 'Win') {
-        messages.innerHTML = '<h2>YOU WIN THIS ROUND!</h2>';
+        messages.innerHTML = '<h2>YOU WIN THIS ROUND!</h2><h2>WELL DONE!</h2>';
     } else {
-        messages.innerHTML = '<h2>YOU LOSE THIS ROUND!</h2>';
+
+        messages.innerHTML = '<h2>YOU LOSE THIS ROUND!</h2><h2>BETTER LUCK NEXT TIME!</h2>';
     }
 
 
