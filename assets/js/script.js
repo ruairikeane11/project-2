@@ -44,9 +44,9 @@ function playGame(playerChoice) {
     let computerChoice = Math.floor(Math.random() * 3);
 
 
-    let computerIndex =
-        computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
-    computerImage.alt = choices[computerChoice];
+    let computerIndex = choices.indexOf(computerChoice);
+    computerImage.src = `assets/images/${choices[computerIndex]}.jpg`;
+    computerImage.alt = choices[computerIndex];
 
     let result = checkWinner(choices[playerChoice], choices[computerChoice]);
 
