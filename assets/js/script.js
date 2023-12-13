@@ -37,22 +37,27 @@ for (let button of buttons) {
 function playGame(playerChoice) {
 
 
-    let playerIndex = choices.indexOf(playerChoice);
-    playerImage.src = `assets/images/${choices[playerIndex]}.jpg`;
-    playerImage.alt = choices[playerIndex];
+    playerImage.src = `assets/images/${choices[playerChoice]}.jpg`;
+    playerImage.alt = choices[playerChoice];
 
     let computerChoice = Math.floor(Math.random() * 3);
 
-
-    let computerIndex = choices.indexOf(computerChoice);
-    computerImage.src = `assets/images/${choices[computerIndex]}.jpg`;
-    computerImage.alt = choices[computerIndex];
+    computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
+    computerImage.alt = choices[computerChoice];
 
     let result = checkWinner(choices[playerChoice], choices[computerChoice]);
 
 
     updateScores(result);
     getMessage(result);
+
+    if (currentRound > totalRounds) {
+        currentRound++
+    } else {
+        endGame()
+
+    }
+
 }
 
 /**
@@ -90,11 +95,12 @@ function getMessage(result) {
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
-        messages.innerHTML = `<h3> ITS A DRAW</h3>`;
+        messages.innerHTML = '<h2>Go Again!</h2>';
     } else if (result === 'Win') {
-        messages.innerHTML = `<h3> YOU WIN!</h3>`;
+        messages.innerHTML = `<h2>You Win!</h2>`;
     } else {
-        messages.innerHTML = `<h3> YOU LOSE!</h3>`;
+
+        messages.innerHTML = `<h2>You Lose!</h2>`;
     }
 
 
@@ -112,9 +118,6 @@ function updateScores(result) {
 
     if (result === "Tie") {
 
-        playerScore += 1;
-        computerScore += 1;
-
     } else if (result === 'Win') {
         playerScore += 1;
 
@@ -127,10 +130,5 @@ function updateScores(result) {
 }
 
 /**
- * Ends round and gets increments the rounds integer by 1
+ * Ends game and gets winner of round
  */
-function endGame() {
-
-}
-
-

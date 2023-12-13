@@ -57,18 +57,20 @@ footer>p {
 .player {
     background-color: blue;
     float: left;
-    width: 40%;
+    width: 35%;
     height: 290px;
+
 }
 
 .computer {
     background-color: red;
     float: right;
-    width: 40%;
-    height: 290px;
+    width: 35%;
+    height: 270px;
 }
 
 #messages {
+
     height: 30px;
 
 }
@@ -91,9 +93,9 @@ footer>p {
 }
 
 #player-round {
-    text-align: left;
+    padding-top: 0.3px;
 }
 
 #computer-round {
-    text-align: left;
+    padding-top: 0.3px;
 }
