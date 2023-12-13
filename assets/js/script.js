@@ -10,6 +10,8 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 let messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors"];
+let currentRound = 1;
+const totalRounds = 5;
 
 
 /**
@@ -49,6 +51,13 @@ function playGame(playerChoice) {
     updateScores(result);
     getMessage(result);
 
+    if (currentRound > totalRounds) {
+        currentRound++
+    } else {
+        endGame()
+
+    }
+
 }
 
 /**
@@ -86,7 +95,7 @@ function getMessage(result) {
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
-        messages.innerHTML = '<h2>ITS A DRAW!</h2><h2>GO AGAIN!</h2>';
+        messages.innerHTML = '<h2>Go Again!</h2>';
     } else if (result === 'Win') {
         messages.innerHTML = `<h2>${playerChoice} beats ${computerChoice}, You Win!</h2>`;
     } else {
@@ -121,7 +130,19 @@ function updateScores(result) {
 
     document.getElementById('player-score').textContent = playerScore.toString();
     document.getElementById('computer-score').textContent = computerScore.toString();
+}
 
+/**
+ * Ends game and gets winner of round
+ */
 
+function (endGame) {
+    if (parseInt(playerScore.innerText) > parseInt(computerScore.innerText)) {
+        messages.innerHTML = `<h1> WELL DONE! YOU WON THIS ROUND</h1>`;
+    } else if (parseInt(playerScore.innerText) < parseInt(computerScore.innerText)) {
+        messages.innerHTML = `<h1> HARD LUCK! COMPUTER WINS THIS ROUND </h1>`;
+    } else {
+        messages.innerHTML = `<h1> IT'S A TIE </h1>`;
+    }
 }
 
