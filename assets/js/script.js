@@ -37,12 +37,15 @@ for (let button of buttons) {
 function playGame(playerChoice) {
 
 
-    playerImage.src = `assets/images/${choices[playerChoice]}.jpg`;
-    playerImage.alt = choices[playerChoice];
+    let playerIndex = choices.indexOf(playerChoice);
+    playerImage.src = `assets/images/${choices[playerIndex]}.jpg`;
+    playerImage.alt = choices[playerIndex];
 
     let computerChoice = Math.floor(Math.random() * 3);
 
-    computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
+
+    let computerIndex =
+        computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
     computerImage.alt = choices[computerChoice];
 
     let result = checkWinner(choices[playerChoice], choices[computerChoice]);
@@ -50,14 +53,6 @@ function playGame(playerChoice) {
 
     updateScores(result);
     getMessage(result);
-
-    if (currentRound > totalRounds) {
-        currentRound++
-    } else {
-        endGame()
-
-    }
-
 }
 
 /**
@@ -95,12 +90,11 @@ function getMessage(result) {
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
-        messages.innerHTML = '<h2>Go Again!</h2>';
+        messages.innerHTML = `<h3> ITS A DRAW</h3>`;
     } else if (result === 'Win') {
-        messages.innerHTML = `<h2>${playerChoice} beats ${computerChoice}, You Win!</h2>`;
+        messages.innerHTML = `<h3> YOU WIN!</h3>`;
     } else {
-
-        messages.innerHTML = `<h2>${computerChoice} beats ${playerChoice}, Hard luck!</h2>`;
+        messages.innerHTML = `<h3> YOU LOSE!</h3>`;
     }
 
 
@@ -136,13 +130,5 @@ function updateScores(result) {
  * Ends game and gets winner of round
  */
 
-function (endGame) {
-    if (parseInt(playerScore.innerText) > parseInt(computerScore.innerText)) {
-        messages.innerHTML = `<h1> WELL DONE! YOU WON THIS ROUND</h1>`;
-    } else if (parseInt(playerScore.innerText) < parseInt(computerScore.innerText)) {
-        messages.innerHTML = `<h1> HARD LUCK! COMPUTER WINS THIS ROUND </h1>`;
-    } else {
-        messages.innerHTML = `<h1> IT'S A TIE </h1>`;
-    }
-}
+
 
