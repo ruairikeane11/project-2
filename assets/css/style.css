@@ -58,14 +58,14 @@ footer>p {
     background-color: blue;
     float: left;
     width: 40%;
-    height: 280px
+    height: 320px
 }
 
 .computer {
     background-color: red;
     float: right;
     width: 40%;
-    height: 280px;
+    height: 320px;
 }
 
 #messages {
@@ -85,7 +85,6 @@ footer>p {
     position: relative;
 }
 
-#text {
+.round {
     text-align: left;
-    padding-top: 1px;
 }
