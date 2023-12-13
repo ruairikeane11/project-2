@@ -58,14 +58,14 @@ footer>p {
     background-color: blue;
     float: left;
     width: 40%;
-    height: 320px
+    height: 290px;
 }
 
 .computer {
     background-color: red;
     float: right;
     width: 40%;
-    height: 320px;
+    height: 290px;
 }
 
 #messages {
@@ -86,5 +86,14 @@ footer>p {
 }
 
 .round {
+    text-align: left;
+    padding-top: 0.5px;
+}
+
+#player-round {
+    text-align: left;
+}
+
+#computer-round {
     text-align: left;
 }

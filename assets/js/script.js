@@ -127,8 +127,10 @@ function updateScores(result) {
 }
 
 /**
- * Ends game and gets winner of round
+ * Ends round and gets increments the rounds integer by 1
  */
+function endGame() {
 
+}
 
 
