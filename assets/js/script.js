@@ -48,7 +48,7 @@ function playGame(playerChoice) {
 
     updateScores(result);
     getMessage(result);
-    endRound();
+
 
 
 }
@@ -88,12 +88,12 @@ function getMessage(result) {
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
-        messages.innerHTML = '<h2>Go Again!</h2>';
+        messages.innerHTML = '<h1>Go Again!</h1>';
     } else if (result === 'Win') {
-        messages.innerHTML = `<h2>You Win!</h2>`;
+        messages.innerHTML = `<h1>You Win!</h1>`;
     } else {
 
-        messages.innerHTML = `<h2>You Lose!</h2>`;
+        messages.innerHTML = `<h1>You Lose!</h1>`;
     }
 
 
@@ -111,7 +111,7 @@ function updateScores(result) {
 
     if (result === "Tie") {
 
-    } else if (result === 'Win') {
+    } else if (result === "Win") {
         playerScore += 1;
 
     } else {
@@ -120,6 +120,9 @@ function updateScores(result) {
 
     document.getElementById('player-score').textContent = playerScore.toString();
     document.getElementById('computer-score').textContent = computerScore.toString();
+
+
+    endRound();
 }
 
 /**
@@ -128,11 +131,10 @@ function updateScores(result) {
 
 function endRound() {
 
-    let playerRound = document.getElementById('player-round').innerText;
-    let computerRound = document.getElementById('computer-round').innerText;
-
+    let playerRound = document.getElementById('player-round');
+    let computerRound = document.getElementById('computer-round');
     let playerScoreValue = parseInt(playerScore.innerText);
-    let computerScore = parseInt(computerScore.innerText);
+    let computerScoreValue = parseInt(computerScore.innerText);
 
     if (playerScoreValue >= 3) {
         playerRound.textContent = parseInt(playerRound.innerText) + 1;
