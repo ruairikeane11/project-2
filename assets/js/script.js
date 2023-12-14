@@ -10,8 +10,6 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 let messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors"];
-let currentRound = 1;
-const totalRounds = 5;
 
 
 /**
@@ -50,13 +48,8 @@ function playGame(playerChoice) {
 
     updateScores(result);
     getMessage(result);
+    endRound();
 
-    if (currentRound > totalRounds) {
-        currentRound++
-    } else {
-        endGame()
-
-    }
 
 }
 
@@ -130,5 +123,29 @@ function updateScores(result) {
 }
 
 /**
- * Ends game and gets winner of round
+ * resets player and computer score but increments rounds by 1
  */
+
+function endRound() {
+
+    let playerRound = document.getElementById('player-round').innerText;
+    let computerRound = document.getElementById('computer-round').innerText;
+
+    let playerScoreValue = parseInt(playerScore.innerText);
+    let computerScore = parseInt(computerScore.innerText);
+
+    if (playerScoreValue >= 3) {
+        playerRound.textContent = parseInt(playerRound.innerText) + 1;
+        // reset  score
+        playerScore.textContent = '0';
+        computerScore.textContent = '0';
+        messages.innerHTML = `<h2> WELL DONE, YOU WON THIS ROUND!</h2>`;
+    } else if (computerScoreValue >= 3) {
+        computerRound.textContent = parseInt(computerRound.innerText) + 1;
+        //resets score
+        playerScore.textContent = '0';
+        computerScore.textContent = '0';
+        messages.innerHTML = `<h2> HARD LUCK, YOU LOSE THIS ROUND!</h2>`;
+    }
+
+}
