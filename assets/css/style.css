@@ -63,10 +63,10 @@ footer>p {
 }
 
 .computer {
-    background-color: red;
+    background-color: green;
     float: right;
     width: 35%;
-    height: 270px;
+    height: 290px;
 }
 
 #messages {

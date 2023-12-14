@@ -34,14 +34,16 @@ for (let button of buttons) {
 
 function playGame(playerChoice) {
 
-
-    playerImage.src = `assets/images/${choices[playerChoice]}.jpg`;
-    playerImage.alt = choices[playerChoice];
-
     let computerChoice = Math.floor(Math.random() * 3);
 
-    computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
+    playerImage.src = `assets/images/${choices[playerChoice]}`;
+    playerImage.alt = choices[playerChoice];
+
+    computerImage.src = `assets/images/${choices[computerChoice]}`;
     computerImage.alt = choices[computerChoice];
+
+
+
 
     let result = checkWinner(choices[playerChoice], choices[computerChoice]);
 
@@ -90,10 +92,10 @@ function getMessage(result) {
     if (result === 'Tie') {
         messages.innerHTML = '<h1>Go Again!</h1>';
     } else if (result === 'Win') {
-        messages.innerHTML = `<h1>You Win!</h1>`;
+        messages.innerHTML = `<h1>Well Done!</h1>`;
     } else {
 
-        messages.innerHTML = `<h1>You Lose!</h1>`;
+        messages.innerHTML = `<h1>Hard Luck!</h1>`;
     }
 
 
