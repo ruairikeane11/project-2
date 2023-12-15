@@ -18,7 +18,8 @@ const choices = ["rock", "paper", "scissors"];
 
 for (let button of buttons) {
     button.addEventListener("click", function () {
-        let playerChoice = this.getAttribute("data-type");
+        let playerChoice = this.getAttribute("data-choice");
+        console.log(playerChoice);
         alert(`You clicked ${playerChoice}`);
         playGame(playerChoice);
 
@@ -33,13 +34,14 @@ for (let button of buttons) {
  */
 
 function playGame(playerChoice) {
+    console.log(playerChoice);
 
     let computerChoice = Math.floor(Math.random() * 3);
 
-    playerImage.src = `assets/images/${choices[playerChoice]}`;
+    playerImage.src = `assets/images/${choices[playerChoice]}3.jpg`;
     playerImage.alt = choices[playerChoice];
 
-    computerImage.src = `assets/images/${choices[computerChoice]}`;
+    computerImage.src = `assets/images/${choices[computerChoice]}3.jpg`;
     computerImage.alt = choices[computerChoice];
 
 
@@ -137,6 +139,7 @@ function endRound() {
     let computerRound = document.getElementById('computer-round');
     let playerScoreValue = parseInt(playerScore.innerText);
     let computerScoreValue = parseInt(computerScore.innerText);
+    let messages = document.getElementById('messages');
 
     if (playerScoreValue >= 3) {
         playerRound.textContent = parseInt(playerRound.innerText) + 1;
