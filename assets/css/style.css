@@ -9,7 +9,7 @@ html {
 
 body {
     font-family: oswald, sans serif;
-    background-color: gray;
+    background-color: lightslategray;
 }
 
 
@@ -68,6 +68,8 @@ footer>p {
     width: 30%;
     height: 290px;
 }
+
+#messages-box {}
 
 #messages {
     height: 0px;

@@ -97,9 +97,12 @@ function getMessage(result) {
         messages.innerHTML = '<h1>Go Again!</h1>';
     } else if (result === 'Win') {
         messages.innerHTML = `<h1>Well Done!</h1>`;
+        messages.style.color = "green";
     } else {
 
         messages.innerHTML = `<h1>Hard Luck!</h1>`;
+        messages.style.color = "red";
+
     }
 
 
