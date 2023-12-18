@@ -146,7 +146,9 @@ function endRound() {
         // reset  score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h2> WELL DONE, YOU WON THIS ROUND!</h2>`;
+        messages.innerHTML = `<h2> WELL DONE, YOU WON THIS ROUND!</h2>`
+        messages.style.color = ;
+
 
     } else if (computerScoreValue >= 3) {
         computerRound.textContent = parseInt(computerRound.innerText) + 1;
