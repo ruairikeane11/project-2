@@ -49,16 +49,15 @@ footer>p {
 .selector {
     display: inline-block;
     margin: 15px;
-    width: 100%;
-    max-width: 150px;
-
+    width: 150px;
+    height: 30px;
 }
 
 
 .player {
     background-color: blue;
     float: left;
-    width: 100%;
+    width: 30%;
     height: 290px;
 
 }
@@ -66,7 +65,7 @@ footer>p {
 .computer {
     background-color: red;
     float: right;
-    width: 100%;
+    width: 30%;
     height: 290px;
 }
 
@@ -80,15 +79,15 @@ footer>p {
 
 
 #player-image {
-    width: 100%;
-    height: auto;
-    /* Ensures images are responsive */
+    width: 50%;
+    height: 55%;
+    position: relative;
 }
 
 #computer-image {
-    width: 100%;
-    height: auto;
-    /* Ensures images are responsive */
+    width: 50%;
+    height: 55%;
+    position: relative;
 }
 
 .round {
@@ -102,14 +101,4 @@ footer>p {
 
 #computer-round {
     padding-top: 0.3px;
-}
-
-/* Media Query for small screens */
-@media screen and (max-width: 768px) {
-    .selector {
-        width: 100%;
-        /* Full width for small screens */
-        max-width: none;
-
-    }
 }
