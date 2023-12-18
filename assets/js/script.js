@@ -63,7 +63,6 @@ function checkWinner(playerChoice, computerChoice) {
     let messages = document.getElementById('messages2');
 
     if (playerChoice === computerChoice) {
-        messages.innerHTML = `<h2> It's A Tie! </h2>`;
         let result = "Tie";
         return result;
 
@@ -71,14 +70,12 @@ function checkWinner(playerChoice, computerChoice) {
         (playerChoice === 'rock' && computerChoice === "scissors") ||
         (playerChoice === 'scissors' && computerChoice === "paper") ||
         (playerChoice === 'paper' && computerChoice === 'rock')) {
-        messages.innerHTML = `<h2> You Win! </h2>`;
-        messages.style.color = "green";
+
         let result = "Win";
         return result;
 
     } else {
-        messages2.innerHTML = `<h2> You Lose! </h2>`;
-        messages.style.color = "red";
+
         let result = 'Lose';
         return result;
     }
@@ -96,11 +93,14 @@ function getMessage(result) {
     if (result === 'Tie') {
         messages.innerHTML = '<h1>Go Again!</h1>';
     } else if (result === 'Win') {
-        messages.innerHTML = `<h1>Well Done!</h1>`;
+        messages.innerHTML = `<h1>Well Done!</h1><br>
+        <h2> You Win! </h2>`;
         messages.style.color = "green";
+
     } else {
 
-        messages.innerHTML = `<h1>Hard Luck!</h1>`;
+        messages.innerHTML = `<h1>Hard Luck!</h1><br>
+        <h2> You Lose! </h2>`;
         messages.style.color = "red";
 
     }
