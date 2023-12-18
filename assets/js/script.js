@@ -72,11 +72,13 @@ function checkWinner(playerChoice, computerChoice) {
         (playerChoice === 'scissors' && computerChoice === "paper") ||
         (playerChoice === 'paper' && computerChoice === 'rock')) {
         messages.innerHTML = `<h2> You Win! </h2>`;
+        messages.style.color = "green";
         let result = "Win";
         return result;
 
     } else {
         messages2.innerHTML = `<h2> You Lose! </h2>`;
+        messages.style.color = "red";
         let result = 'Lose';
         return result;
     }
@@ -147,7 +149,6 @@ function endRound() {
         playerScore.textContent = '0';
         computerScore.textContent = '0';
         messages.innerHTML = `<h2> WELL DONE, YOU WON THIS ROUND!</h2>`
-        messages.style.color = ;
 
 
     } else if (computerScoreValue >= 3) {
