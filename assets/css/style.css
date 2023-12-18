@@ -76,7 +76,8 @@ footer>p {
 }
 
 #messages2 {
-    height: 30px;
+    height: 0px;
+    margin-bottom: -50px;
 
 }
 
