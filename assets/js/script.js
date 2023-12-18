@@ -33,7 +33,6 @@ for (let button of buttons) {
  */
 
 function playGame(playerChoice) {
-    console.log(playerChoice);
 
     let computerChoice = Math.floor(Math.random() * 3);
 
@@ -89,7 +88,7 @@ function checkWinner(playerChoice, computerChoice) {
  */
 
 function getMessage(result) {
-    console.log('getMessage has run');
+
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
@@ -148,14 +147,14 @@ function endRound() {
         playerScore.textContent = '0';
         computerScore.textContent = '0';
         messages.innerHTML = `<h2> WELL DONE, YOU WON THIS ROUND!</h2>`;
-        console.log('round messages has run');
+
     } else if (computerScoreValue >= 3) {
         computerRound.textContent = parseInt(computerRound.innerText) + 1;
         //resets score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
         messages.innerHTML = `<h2> HARD LUCK, YOU LOSE THIS ROUND!</h2>`;
-        console.log('round messages has run');
+
     }
 
 }
