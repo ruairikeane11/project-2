@@ -63,7 +63,7 @@ footer>p {
 }
 
 .computer {
-    background-color: green;
+    background-color: blue;
     float: right;
     width: 35%;
     height: 290px;
@@ -71,7 +71,12 @@ footer>p {
 
 #messages {
     height: 30px;
-    padding-top: 40px;
+    padding-top: 60px;
+
+}
+
+#messages2 {
+    height: 30px;
 
 }
 

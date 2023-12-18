@@ -8,7 +8,6 @@ let playerScore = document.getElementById("player-score");
 let computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-let messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors"];
 
 
@@ -49,10 +48,8 @@ function playGame(playerChoice) {
 
     let result = checkWinner(choices[playerChoice], choices[computerChoice]);
 
-
-    updateScores(result);
     getMessage(result);
-
+    updateScores(result);
 
 
 }
@@ -63,8 +60,11 @@ function playGame(playerChoice) {
  */
 
 function checkWinner(playerChoice, computerChoice) {
+
+    let messages = document.getElementById('messages2');
+
     if (playerChoice === computerChoice) {
-        alert('It is a tie!');
+        messages.innerHTML = `<h2> It's A Tie! </h2>`;
         let result = "Tie";
         return result;
 
@@ -72,12 +72,12 @@ function checkWinner(playerChoice, computerChoice) {
         (playerChoice === 'rock' && computerChoice === "scissors") ||
         (playerChoice === 'scissors' && computerChoice === "paper") ||
         (playerChoice === 'paper' && computerChoice === 'rock')) {
-        alert("You win :)");
+        messages.innerHTML = `<h2> You Win! </h2>`;
         let result = "Win";
         return result;
 
     } else {
-        alert('You lose:(');
+        messages2.innerHTML = `<h2> You Lose! </h2>`;
         let result = 'Lose';
         return result;
     }
@@ -89,6 +89,7 @@ function checkWinner(playerChoice, computerChoice) {
  */
 
 function getMessage(result) {
+    console.log('getMessage has run');
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
@@ -147,12 +148,14 @@ function endRound() {
         playerScore.textContent = '0';
         computerScore.textContent = '0';
         messages.innerHTML = `<h2> WELL DONE, YOU WON THIS ROUND!</h2>`;
+        console.log('round messages has run');
     } else if (computerScoreValue >= 3) {
         computerRound.textContent = parseInt(computerRound.innerText) + 1;
         //resets score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
         messages.innerHTML = `<h2> HARD LUCK, YOU LOSE THIS ROUND!</h2>`;
+        console.log('round messages has run');
     }
 
 }
