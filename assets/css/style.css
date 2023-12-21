@@ -72,10 +72,15 @@ footer>p {
 
 
 #messages {
-    height: 0px;
-    padding-top: 60px;
-
+    max-height: 200px;
+    /* Set a maximum height for the messages area */
+    overflow: auto;
+    /* Add scroll if content exceeds the max height */
+    padding-top: 10px;
+    /* Adjusted padding to create space */
 }
+
+
 
 
 #player-image {
@@ -101,4 +106,20 @@ footer>p {
 
 #computer-round {
     padding-top: 0.3px;
+}
+
+/* Media query for smaller screnes*/
+
+@media only screen and (max-width: 600px) {
+    .game-area {
+        width: 90%;
+    }
+
+    .selector {
+        width: 100%;
+        margin: 10px 0;
+
+    }
+
+
 }
