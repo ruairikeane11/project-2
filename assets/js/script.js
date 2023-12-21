@@ -151,7 +151,7 @@ function endRound() {
         // reset  score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h2> WELL DONE, YOU WON THIS ROUND!</h2>`
+        messages.innerHTML = `<h2>WELL DONE</h2><h2>YOU WON THIS ROUND!</h2>`
 
 
     } else if (computerScoreValue >= 3) {
@@ -159,7 +159,7 @@ function endRound() {
         //resets score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h2> HARD LUCK, YOU LOSE THIS ROUND!</h2>`;
+        messages.innerHTML = `<h2>HARD LUCK</h2><h2>YOU LOSE THIS ROUND!</h2>`;
 
     }
 
