@@ -93,13 +93,13 @@ function getMessage(result) {
     if (result === 'Tie') {
         messages.innerHTML = '<h1>Go Again!</h1>';
     } else if (result === 'Win') {
-        messages.innerHTML = `<h1>Well Done!</h1><hr>
+        messages.innerHTML = `<h1>Well Done!</h1>
         <h2>You Win!</h2>`;
         messages.style.color = "green";
 
     } else {
 
-        messages.innerHTML = `<h1>Hard Luck!</h1><hr>
+        messages.innerHTML = `<h1>Hard Luck!</h1>
         <h2>You Lose!</h2>`;
         messages.style.color = "red";
 
