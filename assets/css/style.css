@@ -21,10 +21,10 @@ header {
 }
 
 footer {
-    position: absolute;
+    /* remove absolute*/
     width: 100%;
     min-height: 50px;
-    bottom: 0;
+    /* remove 0 bottom*/
     left: 0;
     box-sizing: border-box;
     padding-top: 1px;
@@ -109,6 +109,7 @@ footer>p {
 @media only screen and (max-width: 600px) {
     .game-area {
         width: 90%;
+        margin-top: 20px;
     }
 
     .selector {
