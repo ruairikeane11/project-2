@@ -9,7 +9,7 @@ html {
 
 body {
     font-family: oswald, sans serif;
-    background-color: lightslategray;
+    background-color: gray;
 }
 
 
@@ -63,7 +63,7 @@ footer>p {
 }
 
 .computer {
-    background-color: green;
+    background-color: red;
     float: right;
     width: 30%;
     height: 290px;
