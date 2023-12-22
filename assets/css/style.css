@@ -34,7 +34,7 @@ footer {
     padding-top: 1px;
     text-align: center;
     color: gray;
-    background-color: black;
+    background-color: rgb(60, 65, 66);
 }
 
 footer>p {
@@ -79,14 +79,7 @@ footer>p {
 #messages {
     height: 0px;
     padding-top: 60px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-
-
 }
-
-#message-box {}
 
 
 
