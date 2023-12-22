@@ -129,6 +129,20 @@ footer>p {
 
     }
 
+    #player-image,
+    #computer-image {
+        width: 100%;
+        /* Make the images fill the container width */
+        height: auto;
+        /* Maintain aspect ratio */
+        max-width: 100%;
+        /* Ensure the image doesn't exceed its natural size */
+        display: block;
+        /* Remove default inline behavior */
+        margin: 0 auto;
+        /* Center the image */
+    }
+
     #messages {
         display: none;
     }
