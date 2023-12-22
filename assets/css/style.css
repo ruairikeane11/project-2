@@ -10,7 +10,7 @@ html {
 body {
     font-family: 'oswald', sans serif;
     background-color: gray;
-    min-height: 100vh;
+
 
 
 }
@@ -24,7 +24,7 @@ header {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     width: 100%;
     min-height: 25px;
     bottom: 0;
