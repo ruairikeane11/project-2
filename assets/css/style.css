@@ -10,8 +10,7 @@ html {
 body {
     font-family: 'oswald', sans serif;
     background-color: gray;
-    margin: 0;
-    padding: 0;
+
 }
 
 
@@ -126,4 +125,6 @@ footer>p {
         float: none;
 
     }
+
+
 }
