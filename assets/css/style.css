@@ -126,5 +126,9 @@ footer>p {
 
     }
 
+    #messages {
+        display: none;
+    }
+
 
 }
