@@ -10,6 +10,7 @@ html {
 body {
     font-family: 'oswald', sans serif;
     background-color: gray;
+    min-height: 100vh;
 
 
 }
