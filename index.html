@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Font awesome and google fonts-->
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+
+    <!--Title-->
     <title>Rock Paper Scissors</title>
+
+    <!--Link to style sheet-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <!--Header-->
     <header>
         <h1>Rock, Paper, Scissors</h1>
     </header>
 
+    <!--Game area section-->
     <section class="game-area">
         <div>
             <p>Make Your Move!</p>
@@ -35,12 +40,14 @@
 
         </div>
 
+        <!--Player box-->
         <div class="player">
             <h3 class="round">Round: <span id="player-round">0</span></h3>
             <h2 class="scores">You: <span id="player-score">0</span></h2>
             <img id="player-image" src="assets/images/paper3.jpg" alt="Rock Paper Scissors">
         </div>
 
+        <!--Computer box-->
         <div class="computer">
             <h3 class="round">Round: <span id="computer-round">0</span></h3>
             <h2 class="scores">Computer: <span id="computer-score">0</span></h2>
@@ -49,14 +56,17 @@
 
     </section>
 
-    <script src="assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/630108b11f.js" crossorigin="anonymous"></script>
-
+    <!--Footer-->
     <footer>
         <h2>Rules</h2>
         <p>Rock > Scissors | Paper > Rock | Scissors > Paper</p>
         <p>First Player To Reach 3 Wins The Round!</p>
     </footer>
+
+    <!--Javascript file-->
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/630108b11f.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
