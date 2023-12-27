@@ -1,8 +1,8 @@
-/**
- * Declare constants for DOM elements
- * and choices
- */
 
+
+/**
+ *  declare buttons for DOM and elements
+ */
 const buttons = document.getElementsByClassName("selector");
 let playerScore = document.getElementById("player-score");
 let computerScore = document.getElementById("computer-score");
@@ -10,11 +10,9 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const choices = ["rock", "paper", "scissors"];
 
-
 /**
- * Add event listeners to all the buttons
+ * Add event listener to buttons
  */
-
 for (let button of buttons) {
     button.addEventListener("click", function () {
         let playerChoice = this.getAttribute("data-choice");
@@ -26,12 +24,10 @@ for (let button of buttons) {
     });
 }
 
-
 /**
  * Main Game function, takes one parameter 
  * which is the data-choice value of selected button
  */
-
 function playGame(playerChoice) {
 
     let computerChoice = Math.floor(Math.random() * 3);
