@@ -13,14 +13,12 @@ const choices = ["rock", "paper", "scissors"];
 /**
  * Add event listeners to all the buttons
  */
+// Loop through buttons and add event listeners
 for (let button of buttons) {
     button.addEventListener("click", function () {
-        let playerChoice = this.getAttribute("data-choice");
-        console.log(playerChoice);
+        const playerChoice = button.getAttribute("data-choice");
         alert(`You clicked ${choices[playerChoice]}`);
         playGame(playerChoice);
-
-
     });
 }
 
@@ -29,7 +27,6 @@ for (let button of buttons) {
  * which is the data-choice value of selected button
  */
 function playGame(playerChoice) {
-
 
     let computerChoice = Math.floor(Math.random() * 3);
 
@@ -55,21 +52,16 @@ function checkWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         let result = "Tie";
         return result;
-
     } else if (
         (playerChoice === 'rock' && computerChoice === "scissors") ||
         (playerChoice === 'scissors' && computerChoice === "paper") ||
         (playerChoice === 'paper' && computerChoice === 'rock')) {
-
         let result = "Win";
         return result;
-
     } else {
-
         let result = 'Lose';
         return result;
     }
-
 }
 
 /**
@@ -84,14 +76,11 @@ function getMessage(result) {
     } else if (result === 'Win') {
         messages.innerHTML = `<h1>Well Done!</h1>
         <h2>You Win!</h2>`;
-        messages.style.color = "green";
-
+        messages.style.color = "blue";
     } else {
-
         messages.innerHTML = `<h1>Hard Luck!</h1>
         <h2>You Lose!</h2>`;
         messages.style.color = "red";
-
     }
 }
 
@@ -104,10 +93,8 @@ function updateScores(result) {
     let computerScore = parseInt(document.getElementById('computer-score').innerText);
 
     if (result === "Tie") {
-
     } else if (result === "Win") {
         playerScore += 1;
-
     } else {
         computerScore += 1;
     }
@@ -136,14 +123,11 @@ function endRound() {
         playerScore.textContent = '0';
         computerScore.textContent = '0';
         messages.innerHTML = `<h2>WELL DONE</h2><h2>YOU WON THIS ROUND!</h2>`
-
-
     } else if (computerScoreValue >= 3) {
         computerRound.textContent = parseInt(computerRound.innerText) + 1;
         //resets score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
         messages.innerHTML = `<h2>HARD LUCK</h2><h2>YOU LOSE THIS ROUND!</h2>`;
-
     }
 }
