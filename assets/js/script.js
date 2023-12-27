@@ -95,7 +95,6 @@ function getMessage(result) {
     }
 }
 
-
 /**
  * Gets score from DOM and increments by one
  */
