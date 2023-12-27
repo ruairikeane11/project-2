@@ -60,7 +60,7 @@ function playGame(playerChoice) {
 
 function checkWinner(playerChoice, computerChoice) {
 
-    let messages = document.getElementById('messages2');
+
 
     if (playerChoice === computerChoice) {
         let result = "Tie";
