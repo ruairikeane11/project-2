@@ -1,39 +1,120 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock, Paper, Scissors
 
-Welcome,
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Rock, Paper Scissors is a digital game that leaves no chance of luck. The player has the option to pick either the Rock, Paper, or Scissors button. It is to be played against the computer, which randomly generates an answer from the three buttons dislayed on the screen. Paper beats rock, but loses to scissors. Rock beats scissors, but loses to Paper, and Scissors beats Paper, but loses to Rock. The winners score will increment by one and the game can then be played again. The first player to reach a score of three wins the round. 
 
-## Codeanywhere Reminders
+The games desig is minimal to make it's usage appropriate for people of any age!
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+![Alt text](image-3.png)
 
-`python3 -m http.server`
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+![Alt text](image-1.png)
+- Mobile Viewing
+# Features 
 
-`http_server`
+ Header 
+-
+The header is found at the top of the page and clearly shows the title. The colour contrasts with the background and makes the lettering very easy to read.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Alt text](image-2.png)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Buttons 
+-
 
-To log into the Heroku toolbelt CLI:
+Underneath the header lies the three buttons, Rock, Paper and Scissors.  The user pics one button and then the game will run.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Alt text](image-4.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The Game Area 
+-
+Beneath, lies the game area. Once the player picks a button, javascript randomly geneates a random choice out of the three buttons. Whoever wins will have their score incremented by 1. And no party will have their score incremented if it is a draw.
 
----
+![Alt text](image-5.png)
 
-Happy coding!
+The Footer 
+-
+The footer lies at the very bottom of the page. There, you can find the rules in order to understand how the game works.
+
+![Alt text](image-6.png)
+
+# Wireframes 
+Sketching
+-
+I made a mock up game with pen and paper to roughly design the game.
+![Alt text](image-9.png)
+
+
+
+
+# Testing 
+
+
+
+Devtools
+-
+Throughout this project I regularly used chrome devtools to inspect my work and see how the game functions. I used lighthouse to test the site acessability regularly unsuring it always maintaine high scores
+
+![Alt text](image-7.png)
+
+HTML Validation 
+-
+I used https://validator.w3.org/ to test my HTML content ensuring that there were no errors found in my 
+
+CSS Validation 
+-
+I used https://jigsaw.w3.org/css-validator/ to test my CSS content and ensured that there were no errors found in my code.
+
+![Alt text](image-8.png)
+
+Javascript Validation 
+-
+I used https://jshint.com/ to test my javascript files to ensure all of my functions were running smooth. It had the following metrics.
+
+![Alt text](image-15.png)
+
+
+
+Manual Testing 
+-
+I sent the game to numerous friends and family members, many of whom have different mobile devices to ensure the game runs and looks optmimal on numerous screen sizes.
+
+# Credits
+
+- I used Matt Rudge's video (https://www.youtube.com/watch?v=apK6caj8bfI) as inspiration for my project. Specifically, I used the block of code demonstrated in his video to make the game run once a button is clicked.
+![Alt text](image-10.png)
+
+- I also used (https://chat.openai.com/c/0f2d1c66-09a6-468f-8e6e-a3f83c472b7f) throughout to debug. It was able to help me fix an issue I had in my code which was prevnting the computer choice being random. 
+![Alt text](image-11.png) 
+![Alt text](image-12.png)
+
+- I used one rock, paper and scissors image that I found on google images and then made it into three individual images. 
+![Alt Text](assets/images/RPS.jpg)
+
+- I used (https://www.youtube.com/watch?v=apK6caj8bfI) as inspiration for my game design. I customised it to fit my own game design which was slightly different from the one displayed in the video.
+
+![Alt text](image-13.png)
+
+![Alt text](image-14.png)
+
+- I used the Oswald font from (https://fonts.google.com/) for the text in the body of the webpage. I also used (https://fontawesome.com/) for the icons in each button.
+
+![Alt text](image-16.png)
+
+# Deployment 
+
+- I used https://www.gitpod.io/ and deployed early to https://github.com/ very early on in the development of the project. This meant I could sent my website to my tutor, friends and family to test the project for bugs at every stage throughout the project.
+- The steps to deploying the website are as followed 
+  - In the github repository, go to the setting tab.
+  - Select the Master Branch from the source section dropdown menu.
+  - Now, the page should provide a completed link to the website.
+
+
+
+
+
+
+
+

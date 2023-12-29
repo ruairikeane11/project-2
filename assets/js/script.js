@@ -53,13 +53,13 @@ function checkWinner(playerChoice, computerChoice) {
         let result = "Tie";
         return result;
     } else if (
-        (playerChoice === 'rock' && computerChoice === "scissors") ||
-        (playerChoice === 'scissors' && computerChoice === "paper") ||
-        (playerChoice === 'paper' && computerChoice === 'rock')) {
+        (playerChoice === "rock" && computerChoice === "scissors") ||
+        (playerChoice === "scissors" && computerChoice === "paper") ||
+        (playerChoice === "paper" && computerChoice === "rock")) {
         let result = "Win";
         return result;
     } else {
-        let result = 'Lose';
+        let result = "Lose";
         return result;
     }
 }
@@ -122,7 +122,7 @@ function endRound() {
         // reset  score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h2>WELL DONE</h2><h2>YOU WON THIS ROUND!</h2>`
+        messages.innerHTML = `<h2>WELL DONE</h2><h2>YOU WON THIS ROUND!</h2>`;
     } else if (computerScoreValue >= 3) {
         computerRound.textContent = parseInt(computerRound.innerText) + 1;
         //resets score
