@@ -130,7 +130,7 @@ footer>p {
     }
 }
 
-/* Media query for smaller screnes*/
+/* Media query for bigger screnes*/
 @media only screen and (min-width: 1000px) {
     footer {
         display: none;
