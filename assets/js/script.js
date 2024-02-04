@@ -16,8 +16,7 @@ const choices = ["rock", "paper", "scissors"];
 // Loop through buttons and add event listeners
 for (let button of buttons) {
     button.addEventListener("click", function () {
-        const playerChoice = button.getAttribute("data-choice");
-        alert(`You clicked ${choices[playerChoice]}`);
+        let playerChoice = button.getAttribute("data-choice");
         playGame(playerChoice);
     });
 }
@@ -122,12 +121,12 @@ function endRound() {
         // reset  score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h2>WELL DONE</h2><h2>YOU WON THIS ROUND!</h2>`;
+        messages.innerHTML = `<h1>WELL DONE</h1><h1>YOU WON THIS ROUND!</h1>`;
     } else if (computerScoreValue >= 3) {
         computerRound.textContent = parseInt(computerRound.innerText) + 1;
         //resets score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h2>HARD LUCK</h2><h2>YOU LOSE THIS ROUND!</h2>`;
+        messages.innerHTML = `<12>HARD LUCK</h1><h1>YOU LOSE THIS ROUND!</h1>`;
     }
 }
