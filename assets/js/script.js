@@ -71,14 +71,12 @@ function getMessage(result) {
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
-        messages.innerHTML = '<h1>Go Again!</h1>';
+        messages.innerHTML = '';
     } else if (result === 'Win') {
-        messages.innerHTML = `<h1>Well Done!</h1>
-        <h2>You Win!</h2>`;
+        messages.innerHTML = ``;
         messages.style.color = "blue";
     } else {
-        messages.innerHTML = `<h1>Hard Luck!</h1>
-        <h2>You Lose!</h2>`;
+        messages.innerHTML = ``;
         messages.style.color = "red";
     }
 }
@@ -121,12 +119,12 @@ function endRound() {
         // reset  score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h1>WELL DONE</h1><h1>YOU WON THIS ROUND!</h1>`;
+        messages.innerHTML = `<h1>WELL DONE</h1><h1>YOU WON</h1><h1>THAT ROUND!</h1>`;
     } else if (computerScoreValue >= 3) {
         computerRound.textContent = parseInt(computerRound.innerText) + 1;
         //resets score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h1>HARD LUCK</h1><h1>YOU LOSE THIS ROUND!</h1>`;
+        messages.innerHTML = `<h1>HARD LUCK</h1><h1>YOU LOST</h1><h1>THAT ROUND!</h1>`;
     }
 }
