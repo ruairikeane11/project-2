@@ -71,12 +71,12 @@ function getMessage(result) {
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
-        messages.innerHTML = '';
+        messages.innerHTML = `${playerChoice}`;
     } else if (result === 'Win') {
-        messages.innerHTML = ``;
+        messages.innerHTML = `${playerChoice}`;
         messages.style.color = "blue";
     } else {
-        messages.innerHTML = ``;
+        messages.innerHTML = `${playerChoice}`;
         messages.style.color = "red";
     }
 }
