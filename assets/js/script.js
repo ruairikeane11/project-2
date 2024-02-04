@@ -127,6 +127,6 @@ function endRound() {
         //resets score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<12>HARD LUCK</h1><h1>YOU LOSE THIS ROUND!</h1>`;
+        messages.innerHTML = `<h1>HARD LUCK</h1><h1>YOU LOSE THIS ROUND!</h1>`;
     }
 }
