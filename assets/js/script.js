@@ -37,8 +37,9 @@ function playGame(playerChoice) {
 
 
     let result = checkWinner(choices[playerChoice], choices[computerChoice]);
+    let upperCaseChoice = choices[playerChoice].toUpperCase();
 
-    getMessage(result);
+    getMessage(result, upperCaseChoice);
     updateScores(result);
 }
 
@@ -52,9 +53,9 @@ function checkWinner(playerChoice, computerChoice) {
         let result = "Tie";
         return result;
     } else if (
-        (playerChoice === "rock" && computerChoice === "scissors") ||
-        (playerChoice === "scissors" && computerChoice === "paper") ||
-        (playerChoice === "paper" && computerChoice === "rock")) {
+        (playerChoice === "ROCK" && computerChoice === "SCISSORS") ||
+        (playerChoice === "SCISSORS" && computerChoice === "PAPER") ||
+        (playerChoice === "PAPER" && computerChoice === "ROCK")) {
         let result = "Win";
         return result;
     } else {
@@ -66,18 +67,19 @@ function checkWinner(playerChoice, computerChoice) {
 /**
  * Gets answer from DOM and displays it in the messages div
  */
-function getMessage(result) {
+function getMessage(result, playerChoice) {
 
     let messages = document.getElementById('messages');
 
     if (result === 'Tie') {
-        messages.innerHTML = `${playerChoice}`;
+        messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}.</h2>`;
+        messages.style.color = "blue";
     } else if (result === 'Win') {
-        messages.innerHTML = `${playerChoice}`;
+        messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}</h2>`;
         messages.style.color = "blue";
     } else {
-        messages.innerHTML = `${playerChoice}`;
-        messages.style.color = "red";
+        messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}</h2>`;
+        messages.style.color = "blue";
     }
 }
 
