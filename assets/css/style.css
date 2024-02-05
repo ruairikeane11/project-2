@@ -67,9 +67,13 @@ footer>p {
     float: right;
 }
 
-#messages {
+#message-box #messages {
     height: 0px;
     padding-top: 40px;
+}
+
+#messages1 {
+    margin-top: 10;
 }
 
 #player-image {
