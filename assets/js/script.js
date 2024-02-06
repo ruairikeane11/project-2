@@ -67,19 +67,25 @@ function checkWinner(playerChoice, computerChoice) {
 /**
  * Gets answer from DOM and displays it in the messages div
  */
-function getMessage(result, playerChoice) {
+function getMessage(result, playerChoice, computerChoice) {
 
     let messages = document.getElementById('messages');
+    let messages1 = document.getElementById('messages1');
+
 
     if (result === 'Tie') {
-        messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}.</h2>`;
+        messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}</h2>`;
         messages.style.color = "blue";
+        messages1.innerHTML = `<h2>COMPUTER CHOSE ${computerChoice}</h2>`
     } else if (result === 'Win') {
         messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}</h2>`;
         messages.style.color = "blue";
+        messages1.innerHTML = `<h2>COMPUTER CHOSE ${computerChoice}</h2>`
     } else {
         messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}</h2>`;
         messages.style.color = "blue";
+        messages1.innerHTML = `<h2>Computer chose ${computerChoice}`;
+        messages1.innerHTML = `<h2>COMPUTER CHOSE ${computerChoice}</h2>`
     }
 }
 
