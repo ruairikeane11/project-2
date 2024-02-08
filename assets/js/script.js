@@ -39,7 +39,8 @@ function playGame(playerChoice) {
     let result = checkWinner(choices[playerChoice], choices[computerChoice]);
     let upperCaseChoice = choices[playerChoice].toUpperCase();
 
-    getMessage(result, upperCaseChoice);
+
+    getMessage(result, upperCaseChoice, choices[computerChoice]);
     updateScores(result);
 }
 
@@ -48,6 +49,9 @@ function playGame(playerChoice) {
  * player and computer
  */
 function checkWinner(playerChoice, computerChoice) {
+
+    playerChoice = playerChoice.toUpperCase();
+    computerChoice = computerChoice.toUpperCase();
 
     if (playerChoice === computerChoice) {
         let result = "Tie";
@@ -71,21 +75,26 @@ function getMessage(result, playerChoice, computerChoice) {
 
     let messages = document.getElementById('messages');
     let messages1 = document.getElementById('messages1');
+    let upperCaseChoice = playerChoice.toUpperCase();
+    let computerChoiceUpper = computerChoice.toUpperCase();
+
 
 
     if (result === 'Tie') {
-        messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}</h2>`;
-        messages.style.color = "blue";
-        messages1.innerHTML = `<h2>COMPUTER CHOSE ${computerChoice}</h2>`
+        messages.innerHTML = `<h3>YOU CHOSE</h2><h2>${playerChoice}</h3>`;
+        messages.style.color = "green";
+        messages1.innerHTML = `<h3>COMPUTER CHOSE</h2><h2> ${computerChoiceUpper}</h3>`;
+        messages1.style.color = "red";
     } else if (result === 'Win') {
-        messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}</h2>`;
-        messages.style.color = "blue";
-        messages1.innerHTML = `<h2>COMPUTER CHOSE ${computerChoice}</h2>`
+        messages.innerHTML = `<h3>YOU CHOSE</h2><h2>${playerChoice}</h3>`;
+        messages.style.color = "green";
+        messages1.innerHTML = `<h3>COMPUTER CHOSE</h2><h2> ${computerChoiceUpper}</h3>`;
+        messages1.style.color = "red";
     } else {
-        messages.innerHTML = `<h2>YOU CHOSE</h2><h2>${playerChoice}</h2>`;
-        messages.style.color = "blue";
-        messages1.innerHTML = `<h2>Computer chose ${computerChoice}`;
-        messages1.innerHTML = `<h2>COMPUTER CHOSE ${computerChoice}</h2>`
+        messages.innerHTML = `<h3>YOU CHOSE</h2><h2>${playerChoice}</h3>`;
+        messages.style.color = "green";
+        messages1.innerHTML = `<h3>COMPUTER CHOSE</h2><h2> ${computerChoiceUpper}</h3>`;
+        messages1.style.color = "red";
     }
 }
 
@@ -121,6 +130,7 @@ function endRound() {
     let playerScoreValue = parseInt(playerScore.innerText);
     let computerScoreValue = parseInt(computerScore.innerText);
     let messages = document.getElementById('messages');
+    let messages1 = document.getElementById('messages1');
 
     if (playerScoreValue >= 3) {
         playerRound.textContent = parseInt(playerRound.innerText) + 1;
@@ -128,11 +138,13 @@ function endRound() {
         playerScore.textContent = '0';
         computerScore.textContent = '0';
         messages.innerHTML = `<h1>WELL DONE</h1><h1>YOU WON</h1><h1>THAT ROUND!</h1>`;
+        messages.style.color = 'green';
     } else if (computerScoreValue >= 3) {
         computerRound.textContent = parseInt(computerRound.innerText) + 1;
         //resets score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
         messages.innerHTML = `<h1>HARD LUCK</h1><h1>YOU LOST</h1><h1>THAT ROUND!</h1>`;
+        messages.style.color = 'red'
     }
 }
