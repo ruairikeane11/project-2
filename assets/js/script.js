@@ -81,19 +81,19 @@ function getMessage(result, playerChoice, computerChoice) {
 
 
     if (result === 'Tie') {
-        messages.innerHTML = `<h2>${playerChoice}</h2>`;
+        messages.innerHTML = `<h1>${playerChoice}</h1>`;
         messages.style.color = "green";
-        messages1.innerHTML = `<h2> ${computerChoiceUpper}</h2>`;
+        messages1.innerHTML = `<h1> ${computerChoiceUpper}</h1>`;
         messages1.style.color = "red";
     } else if (result === 'Win') {
-        messages.innerHTML = `<h2>${playerChoice}</h2>`;
+        messages.innerHTML = `<h1>${playerChoice}</h1>`;
         messages.style.color = "green";
-        messages1.innerHTML = `<h2> ${computerChoiceUpper}</h2>`;
+        messages1.innerHTML = `<h1> ${computerChoiceUpper}</h1>`;
         messages1.style.color = "red";
     } else {
-        messages.innerHTML = `<h2>${playerChoice}</h2>`;
+        messages.innerHTML = `<h1>${playerChoice}</h1>`;
         messages.style.color = "green";
-        messages1.innerHTML = `<h2> ${computerChoiceUpper}</h2>`;
+        messages1.innerHTML = `<h1> ${computerChoiceUpper}</h1>`;
         messages1.style.color = "red";
     }
 }
