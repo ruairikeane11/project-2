@@ -133,22 +133,24 @@ function endRound() {
     let messages1 = document.getElementById('messages1');
     let vs = document.getElementById('vs');
 
-    if (playerScoreValue >= 3) {
+    if (playerScoreValue >= 5) {
         playerRound.textContent = parseInt(playerRound.innerText) + 1;
         // reset  score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h1>WELL DONE</h1><h1>YOU WON</h1><h1>THAT ROUND!</h1>`;
+        messages.innerHTML = ``;
         messages1.innerHTML = '';
         messages.style.color = 'green';
+        alert('WELL DONE, YOU WON THAT ROUND!');
 
-    } else if (computerScoreValue >= 3) {
+    } else if (computerScoreValue >= 5) {
         computerRound.textContent = parseInt(computerRound.innerText) + 1;
         //resets score
         playerScore.textContent = '0';
         computerScore.textContent = '0';
-        messages.innerHTML = `<h1>HARD LUCK</h1><h1>YOU LOST</h1><h1>THAT ROUND!</h1>`;
+        messages.innerHTML = ``;
         messages1.innerHTML = '';
-        messages.style.color = 'red'
+        messages.style.color = 'red';
+        alert('HARD LUCK, YOU LOST THAT ROUND!')
 }
 }
