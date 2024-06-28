@@ -1,14 +1,11 @@
 # Rock, Paper, Scissors
 
-
-
 Rock, Paper Scissors is a digial, single player game. The player has the option to pick either the Rock, Paper, or Scissors button. It is to be played against the computer, which randomly generates an answer from the three buttons dislayed on the screen. Paper beats rock, but loses to scissors. Rock beats scissors, but loses to Paper, and Scissors beats Paper, but loses to Rock. The winners score will increment by one and the game can then be played again. The first player to reach a score of five wins the round. 
 
 The games design is minimal and appropriate for people of any age!
 
 
-![alt text](container/image.png) ![alt text](container/image-1.png)
-
+![alt text](container/image111.png)
 
 
 ## Table Of Contents 
@@ -20,15 +17,12 @@ The games design is minimal and appropriate for people of any age!
 5. [Deployment](#deployment)
 
 
-
 # Features 
-
 Header 
 -
 The header is found at the top of the page and clearly shows the title, 'Rock, Paper, Scissors'. The colour contrasts with the background and makes the lettering very easy to read. 
 
 ![alt text](container/image-2.png)
-
 
 
 Buttons 
@@ -45,12 +39,12 @@ Beneath the buttons lies the game area. Once the player picks a button, javascri
 ![alt text](container/image-4.png)
 
 
-
 The Footer 
 -
 The footer lies below the game area. There, you can find the rules in order to understand how the game works. This will be visible for all users regardless of what screen they are viewing.
 
 ![alt text](container/image-5.png)
+
 
 
 # Wireframes 
@@ -67,7 +61,6 @@ As you can see, my deployed version followed a similar design as the mock-up. Bo
 
 
 # Testing 
-
 Lighthouse
 -
 Throughout this project I regularly used the Google 'Lighthouse' feature to inspect my work and see how the game functions. I used lighthouse to test the site acessability and performance regularly unsuring it always maintained high scores.
@@ -75,13 +68,11 @@ Throughout this project I regularly used the Google 'Lighthouse' feature to insp
 ![alt text](container/image-6.png)
 
 
-
 Devtools
 -
 I regularly use Google Devtools to experiement with different styling before adding the code to my workspace. This meant it was easy to test certain aspects of the game design without having to actually implement it in my IDE.
 
 ![alt text](container/image-7.png)
-
 
 
 Desktop Testing
@@ -96,6 +87,7 @@ Mobile Testing
 I often opened the deployed website in my Iphone XR during the production to see how the game functioned. I also sent the website to multiple friends, all of whom used different screen sizes while playing the game. I was also able to test several other mobile screen sizes on Devtools.
 
 ![alt text](container/image-9.png)
+
 
 HTML Validation 
 -
@@ -121,18 +113,13 @@ When I deloyed the site, I found that the game area had bugs, specifically, on c
 ![alt text](container/image-13.png)
 
 
-
 # Credits
-
 ### Love Maths Walkthrough Project - Anna Greaves
-
 I found the 'Love Maths' walkthrough project very helpful. Completing this walkthrough made me familiar with the javascript language and combining javascript, HTML and CSS styling to interact with each other.
 
 
 
 # Deployment 
-
-
 I used https://www.gitpod.io/ and deployed early to https://github.com/ very early on in the development of the project. This meant I could sent my website to my tutor, friends and family to test the project for bugs at every stage throughout the project.
 
 The steps to deploying the website are as follows :
